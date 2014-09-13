@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using BabyBuddy.Api.Models;
 using BabyBuddy.Api.Services;
 
 namespace BabyBuddy.Api.Controllers
@@ -23,10 +24,11 @@ namespace BabyBuddy.Api.Controllers
         }
 
         // POST: api/Motions
-        public void Post(string deviceId)
+        public Sample Post(string deviceId)
         {
             var sample = new SamplesService();
-            sample.MotionDetected(deviceId);
+            var result = sample.MotionDetected(deviceId);
+            return result;
         }
 
         // PUT: api/Motions/5

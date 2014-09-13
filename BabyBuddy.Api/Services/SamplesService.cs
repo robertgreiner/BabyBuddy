@@ -11,7 +11,7 @@ namespace BabyBuddy.Api.Services
 {
     public class SamplesService
     {
-        public void MotionDetected(string deviceId)
+        public Sample MotionDetected(string deviceId)
         {
             var storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
             
@@ -23,6 +23,7 @@ namespace BabyBuddy.Api.Services
 
             var insert = TableOperation.Insert(sample);
             table.Execute(insert);
+            return sample;
         }
     }
 }

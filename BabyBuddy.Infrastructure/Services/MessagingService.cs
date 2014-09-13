@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.WindowsAzure;
+using Microsoft.WindowsAzure.Storage;
 using Twilio;
 
 namespace BabyBuddy.Infrastructure.Services
@@ -11,12 +13,12 @@ namespace BabyBuddy.Infrastructure.Services
     {
         public void SendSms(string message)
         {
-            var AccountSid = "AC4295b2da12b979f1d5007e31b86c4239";
-            var AuthToken = "0468165cd423ae7b70190795c4bd79c1";
-            var fromNumber = "+12143076468";
-            var toNumber = "+12149860739";
+            var accountSid = CloudConfigurationManager.GetSetting("TwilioAccountSid");
+            var authToken = CloudConfigurationManager.GetSetting("TwilioAuthToken");
+            var fromNumber = CloudConfigurationManager.GetSetting("TwilioFromNumber");
+            var toNumber = CloudConfigurationManager.GetSetting("TwilioToNumber");
 
-            var twilio = new TwilioRestClient(AccountSid, AuthToken);
+            var twilio = new TwilioRestClient(accountSid, authToken);
             var sentMessage = twilio.SendMessage(fromNumber, toNumber, message, "");
 
             Console.WriteLine(sentMessage.Sid);
