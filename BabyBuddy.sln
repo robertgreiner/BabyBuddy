@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "BabyBuddy.Cloud", "BabyBuddy.Cloud\BabyBuddy.Cloud.ccproj", "{28B186F2-DDAF-48CC-8965-8D1CC1DAD5BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyBuddy.Api", "BabyBuddy.Api\BabyBuddy.Api.csproj", "{13EC0955-037D-48B4-97AA-6D1E123D9A1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyBuddy.Worker", "BabyBuddy.Worker\BabyBuddy.Worker.csproj", "{14CB750A-4995-4B33-BE2E-9A94F123DEAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28B186F2-DDAF-48CC-8965-8D1CC1DAD5BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B186F2-DDAF-48CC-8965-8D1CC1DAD5BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B186F2-DDAF-48CC-8965-8D1CC1DAD5BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B186F2-DDAF-48CC-8965-8D1CC1DAD5BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13EC0955-037D-48B4-97AA-6D1E123D9A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EC0955-037D-48B4-97AA-6D1E123D9A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13EC0955-037D-48B4-97AA-6D1E123D9A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EC0955-037D-48B4-97AA-6D1E123D9A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14CB750A-4995-4B33-BE2E-9A94F123DEAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14CB750A-4995-4B33-BE2E-9A94F123DEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14CB750A-4995-4B33-BE2E-9A94F123DEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14CB750A-4995-4B33-BE2E-9A94F123DEAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
