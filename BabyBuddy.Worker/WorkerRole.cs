@@ -9,6 +9,7 @@ using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Diagnostics;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using Microsoft.WindowsAzure.Storage;
+using BabyBuddy.Infrastructure.Services;
 
 namespace BabyBuddy.Worker
 {
@@ -20,6 +21,9 @@ namespace BabyBuddy.Worker
         public override void Run()
         {
             Trace.TraceInformation("BabyBuddy.Worker is running");
+
+            var messagingService = new MessagingService();
+            messagingService.SendSms("test message from worker role");
 
             try
             {

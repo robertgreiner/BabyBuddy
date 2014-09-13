@@ -3,15 +3,19 @@
   <Role name="BabyBuddy.Api">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
-      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=KEY" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=KEY" />
     </ConfigurationSettings>
   </Role>
   <Role name="BabyBuddy.Worker">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
-      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=KEY" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=KEY" />
+      <Setting name="TwilioAccountSid" value="SID" />
+      <Setting name="TwilioAuthToken" value="TOKEN" />
+      <Setting name="TwilioFromNumber" value="1234567890" />
+      <Setting name="TwilioToNumber" value="1234567890" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

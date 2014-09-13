@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyBuddy.Api", "BabyBuddy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyBuddy.Worker", "BabyBuddy.Worker\BabyBuddy.Worker.csproj", "{14CB750A-4995-4B33-BE2E-9A94F123DEAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyBuddy.Infrastructure", "BabyBuddy.Infrastructure\BabyBuddy.Infrastructure.csproj", "{0840E34F-9EB1-409E-922C-E67AC0FEC4C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{14CB750A-4995-4B33-BE2E-9A94F123DEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14CB750A-4995-4B33-BE2E-9A94F123DEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14CB750A-4995-4B33-BE2E-9A94F123DEAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0840E34F-9EB1-409E-922C-E67AC0FEC4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0840E34F-9EB1-409E-922C-E67AC0FEC4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0840E34F-9EB1-409E-922C-E67AC0FEC4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0840E34F-9EB1-409E-922C-E67AC0FEC4C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

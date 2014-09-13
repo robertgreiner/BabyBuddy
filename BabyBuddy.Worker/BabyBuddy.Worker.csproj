@@ -75,6 +75,12 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BabyBuddy.Infrastructure\BabyBuddy.Infrastructure.csproj">
+      <Project>{0840e34f-9eb1-409e-922c-e67ac0fec4c8}</Project>
+      <Name>BabyBuddy.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
