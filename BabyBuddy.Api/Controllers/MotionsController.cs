@@ -23,7 +23,7 @@ namespace BabyBuddy.Api.Controllers
         }
 
         // POST: api/Motions
-        public void Post([FromBody]string deviceId)
+        public void Post(string deviceId)
         {
             var sample = new SamplesService();
             sample.MotionDetected(deviceId);

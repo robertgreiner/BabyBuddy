@@ -3,15 +3,15 @@
   <Role name="BabyBuddy.Api">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ACCOUNTNAME;AccountKey=PUTKEYHERE" />
-      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ACCOUNTNAME;AccountKey=PUTKEYHERE" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
     </ConfigurationSettings>
   </Role>
   <Role name="BabyBuddy.Worker">
     <Instances count="1" />
     <ConfigurationSettings>
-      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ACCOUNTNAME;AccountKey=PUTKEYHERE" />
-      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=ACCOUNTNAME;AccountKey=PUTKEYHERE" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
