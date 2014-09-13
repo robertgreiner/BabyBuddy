@@ -4,12 +4,14 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
     </ConfigurationSettings>
   </Role>
   <Role name="BabyBuddy.Worker">
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=babybuddy;AccountKey=Xn+suPPVkT2OCCk3waNB4N9Zo66uwgcRx41loUrFPIiMRLnvQLA/2yC/8fGL1zzfaQdi1SM+GnYkBLGgtaPjnw==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>
