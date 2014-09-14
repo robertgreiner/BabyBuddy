@@ -73,7 +73,7 @@ namespace BabyBuddy.Api.Services
             var queue = queueClient.GetQueueReference("babybuddy");
             queue.CreateIfNotExists();
 
-            var sampleMessage = new SampleMessage {DeviceId = deviceId, SampleType = SampleTypes.Motion};
+            var sampleMessage = new SampleMessage {DeviceId = deviceId, SampleType = SampleTypes.Motion, Message = "Motion Detected!"};
 
             var message = new CloudQueueMessage(JsonConvert.SerializeObject(sampleMessage));
             queue.AddMessage(message);

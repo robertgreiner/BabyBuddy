@@ -11,5 +11,6 @@ namespace BabyBuddy.Infrastructure.Models
     {
         public string DeviceId { get; set; }
         public string SampleType { get; set; }
+        public string Message { get; set; }
     }
 }

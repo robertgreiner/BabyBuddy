@@ -22,8 +22,8 @@ namespace BabyBuddy.Worker
         {
             Trace.TraceInformation("BabyBuddy.Worker is running");
 
-            var messagingService = new MessagingService();
-            messagingService.SendSms("test message from worker role");
+            //var messagingService = new MessagingService();
+            //messagingService.SendSms("test message from worker role");
 
             try
             {
@@ -64,11 +64,11 @@ namespace BabyBuddy.Worker
 
         private async Task RunAsync(CancellationToken cancellationToken)
         {
-            // TODO: Replace the following with your own logic.
+            var queueService = new QueueService();
             while (!cancellationToken.IsCancellationRequested)
             {
-                Trace.TraceInformation("Working");
-                await Task.Delay(1000);
+                queueService.ProcessMessage();
+                await Task.Delay(10000);
             }
         }
     }
