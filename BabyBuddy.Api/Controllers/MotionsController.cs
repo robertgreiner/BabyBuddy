@@ -12,8 +12,10 @@ namespace BabyBuddy.Api.Controllers
     public class MotionsController : ApiController
     {
         // GET: api/Motions
-        public IEnumerable<string> Get()
+        public IEnumerable<string> Get(string deviceId)
         {
+            var sample = new SamplesService();
+            var samples = sample.GetMotionSamples(deviceId);
             return new string[] { "value1", "value2" };
         }
 
@@ -24,7 +26,7 @@ namespace BabyBuddy.Api.Controllers
         }
 
         // POST: api/Motions
-        public Sample Post(string deviceId)
+        public SampleEntity Post(string deviceId)
         {
             var sample = new SamplesService();
             var result = sample.MotionDetected(deviceId);

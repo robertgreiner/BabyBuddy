@@ -6,13 +6,15 @@ using Microsoft.WindowsAzure.Storage.Table;
 
 namespace BabyBuddy.Api.Models
 {
-    public class Sample : TableEntity
+    public class SampleEntity : TableEntity
     {
-        public Sample(string deviceId)
+        public SampleEntity(string deviceId)
         {
             PartitionKey = deviceId;
             RowKey = Guid.NewGuid().ToString();
         }
+
+        public SampleEntity() { }
 
         public string SampleType { get; set; }
         public string Message { get; set; }
