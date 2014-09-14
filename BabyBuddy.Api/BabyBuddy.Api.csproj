@@ -177,7 +177,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\SampleEntity.cs" />
-    <Compile Include="Models\SampleTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SamplesService.cs" />
     <Compile Include="WebRole.cs" />
@@ -233,7 +232,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BabyBuddy.Infrastructure\BabyBuddy.Infrastructure.csproj">
+      <Project>{0840e34f-9eb1-409e-922c-e67ac0fec4c8}</Project>
+      <Name>BabyBuddy.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

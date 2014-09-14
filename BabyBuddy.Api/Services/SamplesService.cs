@@ -2,15 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
+using BabyBuddy.Infrastructure.Models;
 using Microsoft.WindowsAzure;
 using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Queue;
+using Microsoft.WindowsAzure.Storage.Queue.Protocol;
 using Microsoft.WindowsAzure.Storage.Table;
 using BabyBuddy.Api.Models;
+using BabyBuddy.Infrastructure.Models;
+using Newtonsoft.Json;
 
 namespace BabyBuddy.Api.Services
 {
     public class SamplesService
     {
+        private static CloudStorageAccount CloudStorageAccount
+        {
+            get
+            {
+                return CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
+            }
+        }
 
         public SampleEntity MotionDetected(string deviceId)
         {
@@ -45,12 +58,25 @@ namespace BabyBuddy.Api.Services
 
         private static CloudTable SamplesTable()
         {
-            var storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
+            var storageAccount = CloudStorageAccount;
 
             var tableClient = storageAccount.CreateCloudTableClient();
             var table = tableClient.GetTableReference("samples");
             table.CreateIfNotExists();
             return table;
+        }
+
+        public void SendMotionNotification(string deviceId)
+        {
+            var storageAccount = CloudStorageAccount;
+            var queueClient = storageAccount.CreateCloudQueueClient();
+            var queue = queueClient.GetQueueReference("babybuddy");
+            queue.CreateIfNotExists();
+
+            var sampleMessage = new SampleMessage {DeviceId = deviceId, SampleType = SampleTypes.Motion};
+
+            var message = new CloudQueueMessage(JsonConvert.SerializeObject(sampleMessage));
+            queue.AddMessage(message);
         }
     }
 }

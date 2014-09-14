@@ -30,6 +30,7 @@ namespace BabyBuddy.Api.Controllers
         {
             var sample = new SamplesService();
             var result = sample.MotionDetected(deviceId);
+            sample.SendMotionNotification(deviceId);
             return result;
         }
 

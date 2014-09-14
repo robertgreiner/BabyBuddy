@@ -1,4 +1,4 @@
-﻿namespace BabyBuddy.Api.Models
+﻿namespace BabyBuddy.Infrastructure.Models
 {
     public class SampleTypes
     {

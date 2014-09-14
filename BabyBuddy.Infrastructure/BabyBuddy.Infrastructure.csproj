@@ -72,6 +72,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\SampleMessage.cs" />
+    <Compile Include="Models\SampleTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\MessagingService.cs" />
   </ItemGroup>
